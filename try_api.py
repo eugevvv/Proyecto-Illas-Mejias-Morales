@@ -16,7 +16,7 @@ def obtener_departamentos():
             datos = response.json()
             return datos.get("departments", []) #Devolver lista vacía si no se encuentran los departamentos.
         else:
-            print(f"Error al contactar la API de departamentos...")
+            print(f"Error al contactar la API de departamentos. Código: {response.status_code}")
             return [] #lista vacia
     except Exception:
         print(f"Error de conexión con la API: {Exception}")
@@ -37,7 +37,7 @@ def obtener_ID_departamento(id_dpto):
             datos = response.json()
             return datos.get('objectIDs', [])
         else:
-            print(f"Error al obtener obras del departamento...")
+            print(f"Error al obtener obras del departamento. Código: {response.status_code}")
             return []
     except Exception:
         print(f"Error de conexión con la API: {Exception}") 
@@ -85,4 +85,5 @@ def obtener_detalle_obra(id_obra):
     except Exception:
         print(f"Error de conexión al buscar obra {id_obra}: {Exception}")
         return None
+
 
