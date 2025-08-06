@@ -32,9 +32,16 @@ class Catalogo
               except:
                      print(f"Ocurrio un error al cargar el archivo")
 
-
-
-                       
+     def cargar_departamentos(self):
+         print("Consultando departamentos en el Museo Metropolitano de Arte...")
+         datos_dptos = try_api.obtener_departamentos()
+         if datos_dptos:
+             for dpto_dict in datos_dptos:
+                 self.departamentos.append(Departamento(id_dpto=dpto_dict['departamentId'], nombre_dpto=dpto_dict[display_name]))
+             print("Departamentos cargados en el sistema...")
+         else:
+             print("No se pudieron cargar los departamentos")
+             exit()
 
 
 
@@ -45,6 +52,7 @@ class Catalogo
 
 
                 
+
 
 
 
