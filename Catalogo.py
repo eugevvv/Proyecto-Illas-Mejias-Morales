@@ -15,7 +15,7 @@ class Catalogo
         print("Cargando lista de nacionalidades de referencia...")
         
         try:
-            with open(Nacionalidades, 'r', encoding='utf-8) as archivo:
+            with open(Nacionalidades, 'r') as archivo:
 
                  contador_linea = 0 
             
@@ -52,6 +52,7 @@ class Catalogo
 
 
                 
+
 
 
 
