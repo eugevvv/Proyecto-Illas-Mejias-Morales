@@ -18,7 +18,7 @@ class Obra:
         self.url_imagen= datos_obra.get("primaryImageSmall", "Imagen no disponible")
         self.departamento= nombre_departamento
 
-    def show_sumary(self):
+    def show_summary(self):
         print(f"   - ID: {self.id} / Título: {self.titulo} / Artista: {self.nombre_artista}")
 
     def show(self):
@@ -34,5 +34,6 @@ class Obra:
         print(f"Año: {self.anio_creacion}")
         print(f"URL de la imagen: {self.url_imagen}")
         print("---------------------------------------------------\n")
+
 
 
