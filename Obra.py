@@ -1,16 +1,35 @@
+import requests
+from PIL import Image
+
 class Obra:
     """
     Definición de Clase: Obra, sus atributos y métodos.
+    Guarda todos los detalles de una obra
     """
-    def __init__(self, id, titulo, nombre_artista, nacionalidad_artista, fecha_nacimiento_artista, fecha_muerte_artista, tipo, anio_creacion, url_obra, departamento):
-        self.id =id
-        self.titulo= titulo
-        self.nombre_artista= nombre_artista
-        self.nacionalidad_artista= nacionalidad_artista
-        self.fecha_nacimiento_artista= fecha_nacimiento_artista
-        self.fecha_muerte_artista= fecha_muerte_artista
-        self.tipo=tipo
-        self.anio_creacion= anio_creacion
-        self.url_obra= url_obra
-        self.departamento= departamento
+    def __init__(self, datos_obra, nombre_departamento):
+        self.id =datos_obra.get("objectID", "ID no disponible")
+        self.titulo= datos_obra.get("title", "Obra sin título")
+        self.nombre_artista= datos_obra.get("artistDisplayName", "Artista desconocido")
+        self.nacionalidad_artista= datos_obra.get("artistNationality", "Nacionalidad desconocida")
+        self.fecha_nacimiento_artista= datos_obra.get("artistBeginDate", "No disponible")
+        self.fecha_muerte_artista= datos_obra.get("artistEndDate", "No disponible")
+        self.tipo=datos_obra.get("classification", "Obra no clasificada")
+        self.anio_creacion= datos_obra.get("objectDate", "Fecha desconocida")
+        self.url_obra= datos_obra.get("primaryImageSmall", "Imagen no disponible")
+        self.departamento= nombre_departamento
+
+    def show_sumary(self):
+        print(f"   - ID: {self.id} / Título: {self.titulo} / Artista: {self.nombre_artista}")
+
+    def show(self):
+        print("\n---DETALLES COMPLETOS DE LA OBRA SELECCIONADA---")
+        print(f"ID: {self.id}")
+        print(f"Título: {self.titulo}")
+        print(f"Artista: {self.nombre_artista} ({self.fecha_nacimiento_artista} - {self.fecha_muerte_artista})")
+        print(f"Nacionalidad: {self.nacionalidad_artista}")
+        print(f"Departamento: {self.departamento}")
+        print(f"Tipo de Obra: {self.tipo}")
+        print(f"Año: {self.anio_creacion}")
+        print(f"URL de la imagen: {self.url_imagen}")
+        print("---------------------------------------------------\n")
 
