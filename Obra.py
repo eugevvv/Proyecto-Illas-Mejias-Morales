@@ -15,21 +15,24 @@ class Obra:
         self.fecha_muerte_artista= datos_obra.get("artistEndDate", "No disponible")
         self.tipo=datos_obra.get("classification", "Obra no clasificada")
         self.anio_creacion= datos_obra.get("objectDate", "Fecha desconocida")
-        self.url_obra= datos_obra.get("primaryImageSmall", "Imagen no disponible")
+        self.url_imagen= datos_obra.get("primaryImageSmall", "Imagen no disponible")
         self.departamento= nombre_departamento
 
     def show_sumary(self):
         print(f"   - ID: {self.id} / Título: {self.titulo} / Artista: {self.nombre_artista}")
 
     def show(self):
-        print("\n---DETALLES COMPLETOS DE LA OBRA SELECCIONADA---")
+        print("\n-------- Detalles de la Obra Seleccionada ---------")
         print(f"ID: {self.id}")
         print(f"Título: {self.titulo}")
-        print(f"Artista: {self.nombre_artista} ({self.fecha_nacimiento_artista} - {self.fecha_muerte_artista})")
+        print(f"Artista: {self.nombre_artista}") 
+        print(f"Fecha de Nacimiento: {self.fecha_nacimiento_artista}")
+        print(f"Fecha de Fallecimiento: {self.fecha_muerte_artista}")
         print(f"Nacionalidad: {self.nacionalidad_artista}")
         print(f"Departamento: {self.departamento}")
         print(f"Tipo de Obra: {self.tipo}")
         print(f"Año: {self.anio_creacion}")
         print(f"URL de la imagen: {self.url_imagen}")
         print("---------------------------------------------------\n")
+
 
