@@ -9,11 +9,20 @@ Nacionalidades = 'CH_Nationality_List_20171130_v1.csv'
 Limite = 20
 
 class Catalogo:
+    """
+    Clase principal para gestionar el catálogo.
+    Carga de departamentos, nacionalidades y la presentación de obras.
+    """
     def __init__(self):
+        """Inicializa las listas de departamentos y nacionalidades."""
         self.departamentos = []
         self.nacionalidades = []
 
     def cargar_nacionalidades_desde_csv(self): 
+         """
+        Carga la lista de nacionalidades del csv
+        Maneja el error por si el archivo no se encuentra
+        """
         print("Cargando lista de nacionalidades de referencia...")
         
         try:
@@ -34,6 +43,10 @@ class Catalogo:
             print(f"\nOcurrió un error al cargar el archivo")
 
     def cargar_departamentos(self):
+        """
+        Consulta la API del museo para cargar los departamentos
+        En caso de que falle la carga de datos, se termina la ejecucion  
+        """
         print("\nConsultando departamentos en el Museo Metropolitano de Arte...")
         datos_dptos = try_api.obtener_departamentos()
         if datos_dptos:
@@ -45,6 +58,10 @@ class Catalogo:
             exit()
     
     def presentar_obras(self, todos_los_ids, contexto_busqueda):
+        """
+       Muestra las obras de arte en una lista 
+       Permite al usuario explorar los detalles de una obra o cargar resultados adicionales
+        """
         if not todos_los_ids:
             print("No se encontraron obras que coincidan con la búsqueda.")
             return
@@ -181,6 +198,7 @@ class Catalogo:
 
 
                 
+
 
 
 
