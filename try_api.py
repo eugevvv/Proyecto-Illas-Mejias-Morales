@@ -21,7 +21,7 @@ def obtener_departamentos():
     except Exception:
         print(f"Error de conexión con la API: {Exception}")
         return []
-def obtener_ID_departamento(id_dpto):
+def obtener_ids_por_departamento(id_dpto):
     """Obtiene los IDs de todas las obras para un departamento específico.
 
     Args:
@@ -42,7 +42,7 @@ def obtener_ID_departamento(id_dpto):
     except Exception:
         print(f"Error de conexión con la API: {Exception}") 
         return []
-def buscar_ID_termino(termino_busqueda):
+def buscar_ids_por_termino(termino_busqueda):
     """Busca obras que coincidan con un término que el usuario solicite.
 
     Args:
@@ -85,6 +85,7 @@ def obtener_detalle_obra(id_obra):
     except Exception:
         print(f"Error de conexión al buscar obra {id_obra}: {Exception}")
         return None
+
 
 
 
