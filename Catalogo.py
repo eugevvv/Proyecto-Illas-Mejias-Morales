@@ -56,7 +56,7 @@ class Catalogo:
                 break
 
             print(f"\nCargando obras (mostrando de {contador + 1} en adelante)...")
-            ids_pagina = todos_los_ids[contador : contador + Limite] #Comienza desde 0 hasta el Limite, que este caso sería 10 obras
+            ids_pagina = todos_los_ids[contador : contador + Limite] #Comienza desde 0 hasta el Limite, que este caso sería 20 obras
             obras_pagina = []
             for id_obra in ids_pagina:
                 detalle = try_api.obtener_detalle_obra(id_obra)
@@ -74,8 +74,9 @@ class Catalogo:
 
             print("\n--- ¿Qué deseas hacer? ---")
             print("FAVOR, lea con atención")
+            print()
             print("1. Ver detalles de una obra")
-            print("2. Cargar 10 obras más")
+            print(f"2. Cargar {Limite} obras más")
             print("3. Volver al menú principal")
             opcion = input("Elige una opción: ")
 
@@ -94,7 +95,7 @@ class Catalogo:
                     else:
                         print("El ID no está disponible en la lista actual.")
                 except ValueError:
-                    print("Error: Por favor, introduce un número de ID válido.")
+                    print("Existe un error. Por favor, introduce un número de ID válido.")
 
             elif opcion == "2":
                 contador += Limite
@@ -180,6 +181,7 @@ class Catalogo:
 
 
                 
+
 
 
 
