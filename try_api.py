@@ -25,7 +25,7 @@ def obtener_ID_departamento(id_dpto):
     """Obtiene los IDs de todas las obras para un departamento específico.
 
     Args:
-        id_dpto (int): El ID del departamento del museo
+        id_dpto (int): El ID del departamento del museo.
 
     Returns:
         list[int]: Lista de ID's de las obras de arte (Convertidas en Objetos). Retorna lista vacía si existe un error.
@@ -47,7 +47,7 @@ def buscar_ID_termino(termino_busqueda):
 
     Args:
         termino_busqueda (str): El concepto de búsqueda que se usará para encontrar las obras que pida el usuario de determinadas opciones.
-        La finalidad es que se utilice para las dos opciones que no son alfabéticas al inicio: Nacionalidad y Nombre de Autor.
+        La finalidad es que se utilice para las dos opciones que no son alfabéticas al inicio: "Nacionalidad" y "Nombre de Autor".
 
     Returns:
         list[int]: Lista de ID's de objetos que deben coincidir con el térmico que se está buscando.
@@ -69,11 +69,11 @@ def obtener_detalle_obra(id_obra):
     """Obtiene los detalles completos de una única obra de arte por su ID.
 
     Args:
-        id_obra (int): Está variable guarda el ID de la obra de la cual se quieren obtener detalles.
+        id_obra (int): Está variable guarda el ID de la obra de la cual se desean obtener detalles.
 
     Returns:
         dict: Retorna diccionarios con los detalles completos de la obra seleccionada mediante el ID.
-        Retorna None si hay un error.
+        Retorna None si existe algún error.
     """
     url = f"{api}/objects/{id_obra}"
     try: 
@@ -85,5 +85,6 @@ def obtener_detalle_obra(id_obra):
     except Exception:
         print(f"Error de conexión al buscar obra {id_obra}: {Exception}")
         return None
+
 
 
