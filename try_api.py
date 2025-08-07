@@ -1,6 +1,6 @@
 #Este apartado cumple con importar sus funciones al Catálogo
 import requests
-api = "https://collectionapi.metmuseum.org/public/collection/v1/"
+api = "https://collectionapi.metmuseum.org/public/collection/v1"
 
 def obtener_departamentos():
     """Obtiene la información necesaria de los departamentos de la API del Museo
@@ -9,8 +9,8 @@ def obtener_departamentos():
         list[dict]: Lista de diccionarios, donde cada diccionario representa un departamento del museo. 
         Devuelve una lista vacía si encuentra un error, el cual puede ser por la conexión o por no haber encontrado los departamentos.
     """
-    url = f"{api}/ departments"
-    try
+    url = f"{api}/departments"
+    try:
         response = requests.get(url)
         if response.status_code == 200:
             datos = response.json()
@@ -85,6 +85,7 @@ def obtener_detalle_obra(id_obra):
     except Exception:
         print(f"Error de conexión al buscar obra {id_obra}: {Exception}")
         return None
+
 
 
 
