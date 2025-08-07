@@ -137,7 +137,7 @@ class Catalogo:
             print("Favor, introduzca una nacionalidad correcta.")
             return
         
-        ids_obras = try_api.buscar_ids_por_termino(nacionalidad_elegida)
+        ids_obras = try_api.buscar_ID_termino(nacionalidad_elegida)
         self.presentar_obras(ids_obras, f"Nacionalidad: {nacionalidad_elegida}")
 
     def buscar_por_nombre_autor(self):
@@ -147,7 +147,7 @@ class Catalogo:
             print("Favor, introducir un nombre correcto.")
             return
 
-        ids_obras = try_api.buscar_ids_por_termino(nombre_autor)
+        ids_obras = try_api.buscar_ID_termino(nombre_autor)
         self.presentar_obras(ids_obras, f"Autor: {nombre_autor}")
 
     def iniciar_sistema(self):
@@ -181,6 +181,7 @@ class Catalogo:
 
 
                 
+
 
 
 
