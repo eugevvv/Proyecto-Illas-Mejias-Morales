@@ -18,5 +18,6 @@ class Departamento:
         """
         Muestra la información básica del departamento
         """
-        print(f"{self.id.dpto} - {self.nombre_dpto})
+        print(f"{self.id_dpto} - {self.nombre_dpto}")
+
 
