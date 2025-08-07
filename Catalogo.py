@@ -124,7 +124,7 @@ class Catalogo:
                 print("ID de departamento no válido.")
                 return
 
-            ids_obras = try_api.obtener_ids_por_departamento(id_elegido)
+            ids_obras = try_api.obtener_ID_departamento(id_elegido)
             self.presentar_obras(ids_obras, dpto_elegido.nombre_dpto)
         except ValueError:
             print("\nError: Por favor, introduce un número válido.")
@@ -181,6 +181,7 @@ class Catalogo:
 
 
                 
+
 
 
 
