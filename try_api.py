@@ -1,4 +1,4 @@
-#Este apartado cumple con importar sus funciones al Catalogo
+#Este apartado cumple con importar sus funciones al Catálogo
 import requests
 api = "https://collectionapi.metmuseum.org/public/collection/v1/"
 
@@ -85,6 +85,7 @@ def obtener_detalle_obra(id_obra):
     except Exception:
         print(f"Error de conexión al buscar obra {id_obra}: {Exception}")
         return None
+
 
 
 
