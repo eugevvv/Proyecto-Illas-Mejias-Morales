@@ -31,7 +31,7 @@ class Catalogo:
         Maneja el error por si el archivo no se encuentra
         """
         print("Cargando lista de nacionalidades de referencia...")
-        
+
         try:
             with open(Nacionalidades, 'r') as archivo:
             
@@ -46,7 +46,7 @@ class Catalogo:
                     
             print(f"Se cargaron {len(self.nacionalidades)} nacionalidades de referencia...")
             
-        except FileNotFoundError():
+        except FileNotFoundError:
             print(f"\nOcurrió un error al cargar el archivo")
 
     def cargar_departamentos(self):
@@ -234,6 +234,7 @@ class Catalogo:
 
 
                 
+
 
 
 
