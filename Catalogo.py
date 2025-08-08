@@ -125,6 +125,12 @@ class Catalogo:
                 print("Opción no válida. Por favor, elige una opción del 1 al 3.")
 
     def buscar_por_departamento(self):
+        """
+        Docstring for buscar_por_departamento
+    
+        :param self:  Se encarga de permitirle al usuario la busqueda en base al ID
+        del departamento que requieran. 
+        """
         print("\n--- Lista de Departamentos ---")
         for dpto in self.departamentos:
             dpto.show()
@@ -147,6 +153,11 @@ class Catalogo:
             print("\nError: Por favor, introduce un número válido.")
 
     def buscar_por_nacionalidad(self):
+        """
+        Docstring for buscar_por_nacionalidad
+        
+        :param self: Función que permite la busqueda de nacionalidades del artista en específico.
+        """
         print("\n--- Búsqueda por Nacionalidad del Artista ---")
         if self.nacionalidades:
             nacionalidad_elegida = input("Escribe la nacionalidad en inglés (ej: Italian): ")
@@ -158,6 +169,11 @@ class Catalogo:
         self.presentar_obras(ids_obras, f"Nacionalidad: {nacionalidad_elegida}")
 
     def buscar_por_nombre_autor(self):
+        """
+        Docstring for buscar_por_nombre_autor
+        
+        :param self: Busca las obras por medio del nombre facilitado por el usuario. 
+        """
         print("\n--- Búsqueda por Nombre del Autor ---")
         nombre_autor = input("Escribe el nombre del autor (ej: Vincent van Gogh): ")
         if not nombre_autor.strip():
@@ -168,6 +184,12 @@ class Catalogo:
         self.presentar_obras(ids_obras, f"Autor: {nombre_autor}")
 
     def iniciar_sistema(self):
+        """
+        Docstring for iniciar_sistema
+        
+        :param self: Se encarga de almacenar la información de las nacionalidades y los departamentos 
+        para darle inicio al sistema completo. Acá es donde el programa empieza.
+        """
         print("----------------------------------------------")
         print("     ¡Bienvenido al Catálogo 'MetroArt'!      ")
         print("----------------------------------------------")
@@ -198,6 +220,7 @@ class Catalogo:
 
 
                 
+
 
 
 
