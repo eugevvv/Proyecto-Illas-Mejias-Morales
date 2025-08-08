@@ -170,7 +170,7 @@ class Catalogo:
         """
         Docstring for buscar_por_nacionalidad
         
-        :param self: Función que permite la busqueda de nacionalidades del artista en específico.
+        :param self: Consulta a la API para permitir la búsqueda de nacionalidades del artista en específico.
         """
         print("\n--- Búsqueda por Nacionalidad del Artista ---")
         if self.nacionalidades:
@@ -234,6 +234,7 @@ class Catalogo:
 
 
                 
+
 
 
 
