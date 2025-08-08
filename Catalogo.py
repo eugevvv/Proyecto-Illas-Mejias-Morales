@@ -30,9 +30,9 @@ class Catalogo:
         :param self:Carga la lista de nacionalidades del csv
         Maneja el error por si el archivo no se encuentra
         """
-        print("Cargando lista de nacionalidades de referencia...")
+         print("Cargando lista de nacionalidades de referencia...")
 
-        try:
+         try:
             with open(Nacionalidades, 'r') as archivo:
             
                 archivo.readline()
@@ -46,7 +46,7 @@ class Catalogo:
                     
             print(f"Se cargaron {len(self.nacionalidades)} nacionalidades de referencia...")
             
-        except FileNotFoundError:
+         except FileNotFoundError:
             print(f"\nOcurrió un error al cargar el archivo")
 
     def cargar_departamentos(self):
@@ -234,6 +234,7 @@ class Catalogo:
 
 
                 
+
 
 
 
