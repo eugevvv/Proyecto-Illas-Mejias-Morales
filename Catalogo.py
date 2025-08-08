@@ -10,17 +10,24 @@ Limite = 20
 
 class Catalogo:
     """
-    Clase principal para gestionar el catálogo.
-    Carga de departamentos, nacionalidades y la presentación de obras.
+    Docstring for Catalogo
+    Clase principal para gestionar el catálogo
+    Carga de departamentos, nacionalidades y la presentación de obras
     """
     def __init__(self):
-        """Inicializa las listas de departamentos y nacionalidades."""
+        """
+        Docstring for __init__
+        
+        :param self:Inicializa las listas de departamentos y nacionalidades
+        """
         self.departamentos = []
         self.nacionalidades = []
 
     def cargar_nacionalidades_desde_csv(self): 
          """
-        Carga la lista de nacionalidades del csv
+         Docstring for cargar_nacionalidades_desde_csv
+        
+        :param self:Carga la lista de nacionalidades del csv
         Maneja el error por si el archivo no se encuentra
         """
         print("Cargando lista de nacionalidades de referencia...")
@@ -44,7 +51,9 @@ class Catalogo:
 
     def cargar_departamentos(self):
         """
-        Consulta la API del museo para cargar los departamentos
+        Docstring for cargar_departamentos
+        
+        :param self: Consulta la API del museo para cargar los departamentos
         En caso de que falle la carga de datos, se termina la ejecucion  
         """
         print("\nConsultando departamentos en el Museo Metropolitano de Arte...")
@@ -59,8 +68,13 @@ class Catalogo:
     
     def presentar_obras(self, todos_los_ids, contexto_busqueda):
         """
-       Muestra las obras de arte en una lista 
-       Permite al usuario explorar los detalles de una obra o cargar resultados adicionales
+             Docstring for presentar_obras
+        
+        :param self: Muestra las obras de arte en una lista 
+        Permite al usuario explorar los detalles de una obra o cargar resultados adicionales
+        :param todos_los_ids: Una lista con los IDs únicos de todas las obras
+        :param contexto_busqueda: Criterio de busqueda descrito 
+     
         """
         if not todos_los_ids:
             print("No se encontraron obras que coincidan con la búsqueda.")
@@ -220,6 +234,7 @@ class Catalogo:
 
 
                 
+
 
 
 
